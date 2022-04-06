@@ -12,7 +12,7 @@ import pickle
 # flask app
 app = Flask(__name__,template_folder='templates')
 # loading model
-model = pickle.load(open('bmodel.pkl', 'rb'))
+bmodel = pickle.load(open('bmodel.pkl', 'rb'))
 
 @app.route('/')
 def home():
