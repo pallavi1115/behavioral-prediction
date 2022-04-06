@@ -12,16 +12,16 @@ import pickle
 # flask app
 app = Flask(__name__,template_folder='templates')
 # loading model
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('bmodel.pkl', 'rb'))
 
 @app.route('/')
-def homepage():
+def home():
     return render_template('home.html')
 @app.route('/predict' ,methods = ['POST'])
 def predict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
+    prediction = bmodel.predict(final_features)
 
  
     return render_template('home.html', output='Child status is :  {}'.format(prediction[0]))
