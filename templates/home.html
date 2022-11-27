@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bahavioral</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background-color: black;" >
+      
+
+
+<style>
+.title
+{
+  border: 4px double white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 180px;
+  margin-left: 150px;
+  background-color: black;}
+
+div.form {
+  border: 2px double black;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-right: 180px;
+  margin-left: 250px;
+  background-color: black;
+}
+.listcolor{
+         font-weight: bold;
+         background: black; 
+         color:white;
+         font-size:17px;
+         width: 175px;}
+     h3 {color:white;background-color:black;}
+
+     
+</style>
+
+
+<center> <h1 class=title style=color:white;>----Child Behavioural Prediction----</h1></center>
+</div>
+
+
+<div class="form" >
+          <form class="" onsubmit="openModal()" id="myForm" action="{{url_for("predict")}}" method="post">
+          <p style=font-size:20px;color:lightgray> Please fill the following form for prediction</p>
+
+<label for="f1"><h3 >1. Your School &nbsp; </h3></label> 
+       <select class=listcolor id="f1" name="f1" > 
+       <option selected disabled hidden >Scale on 1 to 10 </option>
+       <option value="0">1</option>
+       <option value="1">2</option>
+       <option value="2">3</option>
+       <option value="3">4</option>
+       <option value="4">5</option>
+       <option value="5">6</option>   
+       <option value="6">7</option>
+       <option value="7">8</option>
+       <option value="8">9</option>
+       <option value="9">10</option>
+       </select><br>
+       </br>
+      
+<label for="f2"><h3 >2. Your Appearance (how you look) &nbsp;</h3></label>
+              <select class=listcolor id="f2" name="f2">
+              <option selected disabled hidden>Scale on 1 to 10 </option>
+              <option value="0">1</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="4">5</option>
+              <option value="5">6</option>   
+              <option value="6">7</option>
+              <option value="7">8</option>
+              <option value="8">9</option>
+              <option value="9">10</option>
+              </select><br>
+              </br>
+            
+<label for="f3"><h3>3.Your Health &nbsp;</h3></label> 
+              <select class=listcolor id="f3" name="f3">
+              <option selected disabled hidden>Scale on 1 to 10 </option>
+              <option value="0">1</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="4">5</option>
+              <option value="5">6</option>   
+              <option value="6">7</option>
+              <option value="7">8</option>
+              <option value="8">9</option>
+              <option value="9">10</option>
+              </select><br>
+              </br>
+             
+
+<label for="f4"><h3> 4. Your Life &nbsp;</h3> </label>
+              <select class=listcolor id="f4" name="f4" >
+              <option selected disabled hidden>Scale on 1 to 10 </option>
+              <option value="0">1</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="4">5</option>
+              <option value="5">6</option>   
+              <option value="6">7</option>
+              <option value="7">8</option>
+              <option value="8">9</option>
+              <option value="9">10</option>
+              </select><br>
+              </br>
+
+<label for="f5"><h3>5.In the last 7 days, how many days did you feel like you could concentrate/pay attention well on your school work?</h3></label>
+       <select class=listcolor  id="f5" name="f5" >
+       <option selected disabled hidden >Select one option </option>
+       <option value="0">0 days</option>
+       <option value="1">1-2 days</option>
+       <option value="2">3-4 days</option>
+       <option value="3">5-6 days</option>
+       <option value="4">7 days</option>
+       </select><br>
+       </br>
+       
+<label for="f6"><h3> 6. In the last 7 days, how many days did you feel tired?</h3> </label>
+              <select class=listcolor id="f6" name="f6" >
+              <option selected disabled hidden >Select one option </option>
+              <option value="0">0 days</option>
+              <option value="1">1-2 days</option>
+              <option value="2">3-4 days</option>
+              <option value="3">5-6 days</option>
+              <option value="4">7 days</option>
+              </select><br>
+              </br>
+                           
+<label for="f7"><h3>7. How many times did you brush your teeth Yesterday? &nbsp;</h3></label>
+       <select class=listcolor  id="f7" name="f7" >
+       <option selected disabled hidden >Select one option </option>
+       <option value="0">0</option>
+       <option value="1">1 </option>
+       <option value="2">2 </option>
+       <option value="3">3 </option>
+       </select><br>
+       </br>
+       
+<label for="f8"><h3>8. How often do you go out to play outside? &nbsp;</h3></label> 
+       <select class=listcolor id="f8" name="f8" >
+       <option selected disabled hidden >Select one option </option>
+       <option value="0">A few days each week</option>
+       <option value="1">Hardly ever</option>
+       <option value="2">I don't play</option>
+       <option value="3">Most days</option>
+       </select><br>
+       </br>
+
+<label for="f9"><h3>9.Tell us if you agree or disagree with the following: [I am doing well with my school work]&nbsp;&nbsp;&nbsp;</h3></label>
+              <select class=listcolor id="f9" name="f9">
+              <option selected disabled hidden >Select one option </option>
+                <option value="1">Agree</option>
+                <option value="1">Strongly agree</option>
+                <option value="0">Don't agree or disagree</option>
+              <option value="0">Disagree</option>
+              <option value="0">Strongly disagree</option>
+              </select><br>
+              </br>
+
+            
+<label for="f10"><h3>10.Tell us if you agree or disagree with the following: [I have lots of choice over things that are important to me]</h3></label>
+       <select class=listcolor id="f10" name="f10">
+       <option selected disabled hidden >Select one option </option>
+         <option value="1">Agree</option>
+         <option value="1">Strongly agree</option>
+         <option value="0">Don't agree or disagree</option>
+       <option value="0">Disagree</option>
+       <option value="0">Strongly disagree</option>
+       </select><br>
+       </br>
+
+
+<button type="submit"   style=background-color:black;color:white;font-size:20px; class="btn btn-warning btn-block btn-large">Predict</button>
+<h1 class="navbar-brand" style=color:white;>{{output}}</h1>
+
+
+<br></br>
+
+</div>
+</form>
+</body>
+</html>
+
